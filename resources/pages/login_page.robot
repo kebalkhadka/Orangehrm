@@ -13,6 +13,7 @@ Open Login Page
     Maximize Browser Window
     Wait Until Element Is Visible    ${USERNAME_INPUT}
 
+
 Input Username    [Arguments]    ${username}
     Input Text    ${USERNAME_INPUT}    ${username}
 
@@ -28,10 +29,14 @@ Login with credentials    [Arguments]    ${username}    ${password}
     Click Login
 
 Get Error Message
-    ${msg}=    Get Text    ${ERROR_MSG}
+    Wait Until Element Is Visible    xpath=//p[@class='oxd-text oxd-text--p oxd-alert-content-text']    timeout=10s
+    ${msg}=    Get Text    xpath=//p[@class='oxd-text oxd-text--p oxd-alert-content-text']
     RETURN    ${msg}
 
 Page Should Be Dashboard
     Wait Until Element Is Visible    xpath=//h6[contains(@class,"oxd-topbar-header-breadcrumb-module")]
     ${title}=    Get Text    xpath=//h6[contains(@class,"oxd-topbar-header-breadcrumb-module")]
     Should Be Equal    ${title}    Dashboard
+
+
+

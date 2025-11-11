@@ -17,3 +17,16 @@ Valid login test
     Login With Credentials    ${username}    ${password}
     Page Should Be Dashboard
     Close Browser
+
+#Invalid login test
+#    ${data}=    Load Json From File    ${Data_File}
+#    FOR    ${item}    IN    @{data['invalid_logins']}
+#        Open Login Page
+#        Login With Credentials    ${item['username']}    ${item['password']}
+#        ${error_msg}=    Get Error Message
+#        Should Be Equal    ${error_msg}    ${item['expected_message']}
+#        Close Browser
+#    END
+
+
+        
