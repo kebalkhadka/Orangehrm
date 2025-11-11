@@ -1,0 +1,44 @@
+{
+  "valid_login": {
+    "username": "Admin",
+    "password": "admin123",
+    "expected_result": "Dashboard page is displayed"
+  },
+  "relogin_after_logout": {
+    "username": "Admin",
+    "password": "admin123",
+    "expected_result": "User should be able to login again"
+  },
+  "invalid_logins": [
+    {
+      "username": "abcd",
+      "password": "abc123",
+      "expected_message": "Invalid credentials"
+    },
+    {
+      "username": "Admin",
+      "password": "ad123434",
+      "expected_message": "Invalid credentials"
+    },
+    {
+      "username": "admin",
+      "password": "admin123",
+      "expected_message": "Invalid credentials"
+    }
+  ],
+  "forgot_password": {
+    "valid_user": {
+      "username": "Admin",
+      "expected_message": "Password reset link should be sent"
+    },
+    "invalid_user": {
+      "username": "unknownuser",
+      "expected_message": "User does not exist"
+    }
+  },
+  "empty_credentials": {
+    "username": "",
+    "password": "",
+    "expected_message": "Username and password are required"
+  }
+}
