@@ -1,4 +1,4 @@
-# 🧡 OrangeHRM Automation Suite (Robot Framework)
+#  OrangeHRM Automation Suite (Robot Framework)
 
 This project is an automated test suite for the [OrangeHRM](https://www.orangehrm.com/) web application, built using **Robot Framework** and **SeleniumLibrary**.
 
@@ -7,7 +7,7 @@ The repository is structured to be modular, reusable, and easily extendable for 
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```bash
 Orangehrm/
@@ -65,7 +65,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 ```
-### Running Tests
+## 4 Running test cases
 ```bash
 robot tests/
 
@@ -75,7 +75,7 @@ robot tests/forget_password.robot
 
 ```
 
-## Tools & Libraries Used
+## 5 Tools and libraries used
 ```bash
 | Tool                                                                 | Description               |
 | -------------------------------------------------------------------- | ------------------------- |
