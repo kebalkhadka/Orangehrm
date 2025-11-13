@@ -9,7 +9,7 @@ The repository is structured to be modular, reusable, and easily extendable for 
 
 ## 📦 Project Structure
 
-
+```bash
 Orangehrm/
 ├── resources/
 │ ├── data/ # Test data files (e.g., JSON, CSV)
@@ -29,7 +29,7 @@ Orangehrm/
 ├── README.md
 └── requirements.txt # Python dependencies
 
-
+```
 
 ---
 
