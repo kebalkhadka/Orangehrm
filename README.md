@@ -1,4 +1,4 @@
-#  OrangeHRM Automation Suite (Robot Framework)
+# 🧡 OrangeHRM Automation Suite (Robot Framework)
 
 This project is an automated test suite for the [OrangeHRM](https://www.orangehrm.com/) web application, built using **Robot Framework** and **SeleniumLibrary**.
 
@@ -8,6 +8,9 @@ The repository is structured to be modular, reusable, and easily extendable for 
 ---
 
 ## 📦 Project Structure
+
+
+Orangehrm/
 ├── resources/
 │ ├── data/ # Test data files (e.g., JSON, CSV)
 │ ├── keywords/ # Reusable Robot Framework keywords
@@ -27,6 +30,7 @@ The repository is structured to be modular, reusable, and easily extendable for 
 └── requirements.txt # Python dependencies
 
 
+
 ---
 
 ## ⚙️ Setup Instructions
@@ -37,10 +41,6 @@ The repository is structured to be modular, reusable, and easily extendable for 
 git clone https://github.com/<your-username>/Orangehrm.git
 cd Orangehrm
 
-Create a Virtual Environment (Recommended)
+2️⃣ Create a Virtual Environment (Recommended)
 python -m venv .venv
-# Activate it
-# On Windows:
-.venv\Scripts\activate
-# On macOS/Linux:
-source .venv/bin/activate
+
