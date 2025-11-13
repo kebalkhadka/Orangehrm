@@ -29,7 +29,7 @@
   "forgot_password": {
     "valid_user": {
       "username": "Admin",
-      "expected_message": "Password reset link should be sent"
+      "expected_message": "A reset password link has been sent to you via email"
     },
     "invalid_user": {
       "username": "unknownuser",
