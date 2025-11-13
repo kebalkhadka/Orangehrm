@@ -82,3 +82,6 @@ robot tests/forget_password.robot
 | [JSONLibrary](https://github.com/robotframework/JSONLibrary)         | JSON data handling        |
 | Python 3.9+                                                          | Programming language      |
 ```
+## 6 Author 
+
+***Kebal khadka***
