@@ -10,7 +10,6 @@ ${RESET_MESSAGE}        xpath=//p[contains(@class,"oxd-text--p")]
 
 *** Keywords ***
 
-
 Open Forgot Password Page
     Open Browser    https://opensource-demo.orangehrmlive.com/    chrome
     Maximize Browser Window
@@ -20,7 +19,7 @@ Open Forgot Password Page
 
 Input Forget Password UserName
     [Arguments]    ${username}
-    Wait Until Element Is Visible        ${RESET_USERNAME}    10s
+    Wait Until Element Is Visible        ${RESET_USERNAME}    10
     Input Text    ${RESET_USERNAME}    ${username}
 
 Click Reset Password Button
