@@ -44,3 +44,43 @@ cd Orangehrm
 2️⃣ Create a Virtual Environment (Recommended)
 python -m venv .venv
 
+```
+### 2️⃣ Create a Virtual Environment (Recommended)
+
+```bash
+python -m venv .venv
+```
+### Activate the virtual environment
+```bash
+# On Windows
+.venv\Scripts\activate
+
+# On macOS/Linux
+source .venv/bin/activate
+```
+
+3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+
+```
+### Running Tests
+```bash
+robot tests/
+
+### Run a specific test file
+
+robot tests/forget_password.robot
+
+```
+
+## Tools & Libraries Used
+```bash
+| Tool                                                                 | Description               |
+| -------------------------------------------------------------------- | ------------------------- |
+| [Robot Framework](https://robotframework.org/)                       | Core automation framework |
+| [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary) | Web automation            |
+| [JSONLibrary](https://github.com/robotframework/JSONLibrary)         | JSON data handling        |
+| Python 3.9+                                                          | Programming language      |
+```
