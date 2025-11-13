@@ -26,6 +26,7 @@
       "expected_message": "Invalid credentials"
     }
   ],
+
   "forgot_password": {
     "valid_user": {
       "username": "Admin",
