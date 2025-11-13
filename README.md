@@ -3,8 +3,7 @@
 This project is an automated test suite for the [OrangeHRM](https://www.orangehrm.com/) web application, built using **Robot Framework** and **SeleniumLibrary**.
 
 It covers key user flows such as login, forgot password, and other HRM functionalities.  
-The repository is structured to be modular, reusable, and easily extendable for both beginners and QA professionals.
-
+The repository is structured to be modular, reusable, and easily extendable using Page object model.
 ---
 
 ## Project Structure
