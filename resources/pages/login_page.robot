@@ -1,5 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    ../resources/keywords/global_keywords.robot
+
 
 *** Variables ***
 ${USERNAME_INPUT}    //input[contains(@class,'oxd-input')]
@@ -15,8 +17,8 @@ Open Login Page
     Call Method    ${options}    add_argument    --disable-infobars
     Open Browser    https://opensource-demo.orangehrmlive.com/    chrome    options=${options}
     Maximize Browser Window
-    Wait Until Page Contains Element    ${USERNAME_INPUT}    10S
-    Wait Until Element Is Visible    ${USERNAME_INPUT}    10S
+    Wait Until Page Contains Element    ${USERNAME_INPUT}    20s
+    Wait Until Element Is Visible    ${USERNAME_INPUT}    20s
 
 
 Input Username    [Arguments]    ${username}
@@ -43,6 +45,18 @@ Page Should Be Dashboard
     Wait Until Element Is Visible    xpath=//h6[contains(@class,"oxd-topbar-header-breadcrumb-module")]
     ${title}=    Get Text    xpath=//h6[contains(@class,"oxd-topbar-header-breadcrumb-module")]
     Should Be Equal    ${title}    Dashboard
+
+
+Verify Username Required
+    Wait Until Element Is Visible    xpath=//input[@name="username"]/ancestor::div[contains(@class,'oxd-input-group')]//span[contains(@class,'oxd-input-field-error-message')]
+    Element Text Should Be     xpath=//input[@name="username"]/ancestor::div[contains(@class,'oxd-input-group')]//span[contains(@class,'oxd-input-field-error-message')]     Required
+
+
+Verify Password Required
+    Wait Until Element Is Visible    xpath=//input[@name="password"]/ancestor::div[contains(@class,'oxd-input-group')]//span[contains(@class,'oxd-input-field-error-message')] 
+    Element Text Should Be    xpath=//input[@name="password"]/ancestor::div[contains(@class,'oxd-input-group')]//span[contains(@class,'oxd-input-field-error-message')]    Required
+
+
 
 
     
