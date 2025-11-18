@@ -17,8 +17,8 @@ Open Login Page
     Call Method    ${options}    add_argument    --disable-infobars
     Open Browser    https://opensource-demo.orangehrmlive.com/    chrome    options=${options}
     Maximize Browser Window
-    Wait Until Page Contains Element    ${USERNAME_INPUT}    20s
-    Wait Until Element Is Visible    ${USERNAME_INPUT}    20s
+    Wait Until Page Contains Element    ${USERNAME_INPUT}    15s
+    Wait Until Element Is Visible    ${USERNAME_INPUT}    15s
 
 
 Input Username    [Arguments]    ${username}
