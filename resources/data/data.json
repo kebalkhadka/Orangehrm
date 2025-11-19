@@ -41,5 +41,24 @@
     "username": "",
     "password": "",
     "expected_message": "Username and password are required"
+  },
+
+  "add_employee": {
+    "employee_1": {
+      "first_name": "John",
+      "last_name": "Walker",
+      "employee_id": "0377"
+    },
+    "employee_2": {
+      "first_name": "Sarah",
+      "last_name": "George",
+      "employee_id": "0455"
+
+    },
+    "employee_3": {
+      "first_name": "Rohan",
+      "last_name": "Mehta",
+      "employee_id": "0512"
+    }
   }
 }
