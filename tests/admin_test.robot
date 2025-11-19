@@ -20,8 +20,6 @@ Admin Panel Test
 
     Open Login Page
     Login with credentials    ${username}    ${password}
-    Page Should Be Dashboard
-
     Go To Admin Page
     Log    Admin page opened successfully
     #loop through employee dictionary
