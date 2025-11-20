@@ -10,6 +10,7 @@ ${Data_File}    ${CURDIR}/../resources/data/data.json
 
 *** Test Cases ***
 Forget Password - Valid User
+    [Tags]    smoke    ForgetPassword     positive
     [Teardown]    Capture Screenshot And Close Browser
     ${data}    Load Json From File    ${Data_File}
     ${valid}   Get From Dictionary    ${data['forgot_password']}    valid_user
@@ -21,6 +22,7 @@ Forget Password - Valid User
 
 
 Forget Password - Invalid User
+    [Tags]    regression    ForgetPassword     negative
     [Teardown]    Capture Screenshot And Close Browser
     ${data}=    Load Json From File    ${Data_File}
     ${invalid}=    Get From Dictionary    ${data['forgot_password']}    invalid_user
