@@ -13,6 +13,7 @@ ${file_path}    ${CURDIR}/../resources/data/data.json
 
 *** Test Cases ***
 Admin Panel Test
+    [Tags]    regression    Admin     positive
     [Teardown]    Capture Screenshot And Close Browser
     ${data}    Load Json From File    ${file_path}
     ${username}=    Set Variable    ${data['valid_login']['username']}
