@@ -25,7 +25,7 @@ Orangehrm/
 │
 ├── .gitignore
 ├── README.md
-└── requirements.txt # Python dependencies
+└── requirements.txt # Python dependencies needed for project
 
 ```
 
