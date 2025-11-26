@@ -5,6 +5,10 @@ This project is an automated test suite for the [OrangeHRM](https://www.orangehr
 It covers key user flows such as login, forgot password, and other HRM functionalities.  
 The repository is structured to be modular, reusable, and easily extendable using Page object model.
 
+To acess the Test cases for this project please check the follwing link
+```
+https://drive.google.com/drive/folders/1u8L1C8G9GYH6Abcg3FGKmHcltlOdDi4e?usp=drive_link
+```
 ## Project Structure
 
 ```bash
