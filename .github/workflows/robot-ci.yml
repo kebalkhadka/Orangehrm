@@ -30,6 +30,14 @@ jobs:
         pip install robotframework-seleniumlibrary
         # add other libraries your tests need
 
+      # Step 4: Install Chrome + chromedriver
+    - name: Install Chrome
+      run: |
+        sudo apt update
+        sudo apt install -y chromium-browser chromium-chromedriver
+        # make sure chromedriver is in PATH
+        echo $PATH
+
     # Step 4: Run Robot Framework tests
     - name: Run Robot Tests
       run: |
