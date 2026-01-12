@@ -17,6 +17,7 @@ Open Forgot Password Page
     Click Element        ${FORGET_LINK}
 
 
+
 Input Forget Password UserName
     [Arguments]    ${username}
     Wait Until Element Is Visible        ${RESET_USERNAME}    10
