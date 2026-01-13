@@ -14,7 +14,9 @@ Open Login Page
     Call Method    ${options}    add_argument    --disable-save-password-bubble
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
+    Call Method    ${options}    add_argument    --binary=/usr/bin/chromium-browser
     Open Browser    https://opensource-demo.orangehrmlive.com/    chrome    options=${options}
+
     Maximize Browser Window
     Wait Until Page Contains Element    ${USERNAME_INPUT}    15s
     Wait Until Element Is Visible    ${USERNAME_INPUT}    15s
