@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-
 *** Variables ***
 ${USERNAME_INPUT}    //input[contains(@class,'oxd-input')]
 ${PASSWORD_INPUT}    xpath=//input[@name="password"]
@@ -10,6 +9,7 @@ ${ERROR_MSG}         xpath=//div[contains(@class,'oxd-alert--error')]//p[contain
 
 *** Keywords ***
 Open Login Page
+    # Create Chrome/Chromium options object
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
 
     # Headless + CI safe flags
@@ -20,14 +20,16 @@ Open Login Page
     Call Method    ${options}    add_argument    --disable-infobars
     Call Method    ${options}    add_argument    --disable-save-password-bubble
 
-    # ✅ Correct way to set Chromium binary
-    Evaluate    ${options}.binary_location = "/usr/bin/chromium-browser"
+    # Set Chromium binary for GitHub runner
+    Call Method    ${options}    __setattr__    binary_location    /usr/bin/chromium-browser
 
-    Open Browser    https://opensource-demo.orangehrmlive.com/    chrome    options=${options}
+    # Open browser
+    Open Browser    https://opensource-demo.orangehrmlive.com/    chromium    options=${options}
 
+    # Maximize and wait
+    Maximize Browser Window
     Wait Until Page Contains Element    ${USERNAME_INPUT}    15s
-
-    Wait Until Element Is Visible    ${USERNAME_INPUT}    15s
+    Wait Until Element Is Visible       ${USERNAME_INPUT}    15s
 
 
 Input Username    [Arguments]    ${username}
