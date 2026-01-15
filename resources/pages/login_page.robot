@@ -11,14 +11,22 @@ ${ERROR_MSG}         xpath=//div[contains(@class,'oxd-alert--error')]//p[contain
 *** Keywords ***
 Open Login Page
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --disable-save-password-bubble
+
+    # Headless + CI safe flags
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Call Method    ${options}    add_argument    --disable-notifications
     Call Method    ${options}    add_argument    --disable-infobars
-    Call Method    ${options}    add_argument    --binary=/usr/bin/chromium-browser
+    Call Method    ${options}    add_argument    --disable-save-password-bubble
+
+    # ✅ Correct way to set Chromium binary
+    Evaluate    ${options}.binary_location = "/usr/bin/chromium-browser"
+
     Open Browser    https://opensource-demo.orangehrmlive.com/    chrome    options=${options}
 
-    Maximize Browser Window
     Wait Until Page Contains Element    ${USERNAME_INPUT}    15s
+
     Wait Until Element Is Visible    ${USERNAME_INPUT}    15s
 
 
