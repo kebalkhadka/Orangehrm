@@ -27,7 +27,7 @@ jobs:
     - name: Install Chromium
       run: |
         sudo apt update
-        sudo apt install -y chrome-browser chromium-chromedriver
+        sudo apt install -y chromium-browser chromium-chromedriver
 
     - name: Run Robot Framework tests
       run: |
