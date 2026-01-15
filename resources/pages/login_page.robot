@@ -24,7 +24,7 @@ Open Login Page
     Call Method    ${options}    __setattr__    binary_location    /usr/bin/chromium-browser
 
     # Open browser
-    Open Browser    https://opensource-demo.orangehrmlive.com/    chromium    options=${options}
+    Open Browser    https://opensource-demo.orangehrmlive.com/    chrome    options=${options}
 
     # Maximize and wait
     Maximize Browser Window

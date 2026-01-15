@@ -27,11 +27,11 @@ jobs:
     - name: Install Chromium
       run: |
         sudo apt update
-        sudo apt install -y chromium-browser chromium-chromedriver
+        sudo apt install -y chrome-browser chromium-chromedriver
 
     - name: Run Robot Framework tests
       run: |
-        robot -d results -v BROWSER:chromium_headless tests/
+        robot -d results -v BROWSER:chrome_headless tests/
 
     - name: Upload Robot Framework logs
       uses: actions/upload-artifact@v4
